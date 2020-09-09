@@ -8,11 +8,11 @@ const log = require('hexo-log')({ 'debug': false, 'slient': false });
 const path = require('path');
 
 const defaultConfig = {
-  'abstract': 'Here\'s something encrypted, password is required to continue reading.',
-  'message': 'Hey, password is required here.',
+  'abstract': '这是一篇加密文章，需要您输入密码哦~',
+  'message': '请在此处输入密码：',
   'template': fs.readFileSync(path.resolve(__dirname, './lib/template.html')).toString(),
-  'wrong_pass_message': 'Oh, this is an invalid password. Check and try again, please.',
-  'wrong_hash_message': 'OOPS, these decrypted content may changed, but you can still have a look.',
+  'wrong_pass_message': '哎呀, 这个密码看着不太对, 请再试试吧',
+  'wrong_hash_message': '哎呀, 这个文章不能被校验, 不过您还是能看看解密后的内容',
 };
 
 const keySalt = textToArray('hexo-blog-encrypt的作者们都是大帅比!');
