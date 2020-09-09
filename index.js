@@ -9,7 +9,7 @@ const path = require('path');
 
 const defaultConfig = {
   'abstract': '这是一篇加密文章，需要您输入密码哦~',
-  'message': '请在此处输入密码：',
+  'message': '请在此处输入密码<font color="#808080" style="font-size:16px"> | 输入后按回车键确认</font>',
   'template': fs.readFileSync(path.resolve(__dirname, './lib/template.html')).toString(),
   'wrong_pass_message': '哎呀, 这个密码看着不太对, 请再试试吧',
   'wrong_hash_message': '哎呀, 这个文章不能被校验, 不过您还是能看看解密后的内容',
